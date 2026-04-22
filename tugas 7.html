@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Portofolio Saya</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS External -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <h1 class="logo">MyPortfolio</h1>
+      <p class="tagline m-0">Web Developer | UI Designer</p>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top main-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Portfolio</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+          <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PROJECTS SECTION -->
+  <section class="section-content">
+    <div class="container">
+      <h2 class="section-title">Galeri Project</h2>
+      <p class="section-text">
+        Berikut beberapa project yang pernah saya buat untuk latihan maupun tugas kuliah.
+      </p>
+
+      <!-- GALLERY GRID -->
+      <div class="row g-4 mt-4">
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card project-card">
+            <img src="portofolio.png" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Landing Page</h5>
+              <p class="card-text">Website landing page responsif menggunakan HTML & CSS.</p>
+              <a href="#" class="btn btn-primary btn-sm">Detail</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card project-card">
+            <img src="design prototipe.png" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Prototipe Design</h5>
+              <p class="card-text">Desain Prototipe aplikasi mobile menggunakan Miro.</p>
+              <a href="#" class="btn btn-primary btn-sm">Detail</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card project-card">
+            <img src="Database.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Database System</h5>
+              <p class="card-text">Rancangan database normalisasi dan ERD PostgreSQL.</p>
+              <a href="#" class="btn btn-primary btn-sm">Detail</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card project-card">
+            <img src="portofolio2.png" class="card-img-top" alt="Project 4">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Portfolio Website</h5>
+              <p class="card-text">Website portofolio multi-halaman dengan Bootstrap.</p>
+              <a href="#" class="btn btn-primary btn-sm">Detail</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- EXTRA INFO -->
+      <div class="mt-5">
+        <h4 class="fw-bold">Tools yang Digunakan</h4>
+        <p>Beberapa tools yang sering saya gunakan dalam pembuatan project:</p>
+        <ul>
+          <li>Visual Studio Code</li>
+          <li>Miro</li>
+          <li>Figma</li>
+          <li>GitHub</li>
+          <li>PostgreSQL</li>
+        </ul>
+      </div>
+
+      <!-- =============================== -->
+      <!-- ✅ FITUR BARU: TASK MANAGER -->
+      <!-- =============================== -->
+      <div class="mt-5">
+        <h3 class="fw-bold">Daftar Tugas Saya</h3>
+        <p class="section-text">
+          Fitur ini menggunakan DOM & Event Handling: Tambah tugas, Edit tugas, dan Search/Filter.
+        </p>
+
+        <!-- Input Tambah Task -->
+        <div class="row g-3 mt-3">
+          <div class="col-md-8">
+            <input type="text" id="taskInput" class="form-control" placeholder="Masukkan tugas baru...">
+          </div>
+          <div class="col-md-4">
+            <button id="addTaskBtn" class="btn btn-primary w-100">Tambah Tugas</button>
+          </div>
+        </div>
+
+        <!-- Search -->
+        <div class="mt-4">
+          <input type="text" id="searchInput" class="form-control" placeholder="Cari tugas...">
+        </div>
+
+        <!-- List Task -->
+        <div class="mt-4">
+          <ul id="taskList" class="list-group"></ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container text-center py-4">
+      <p class="m-0">© 2026 MyPortfolio | Halaman Projects</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- =============================== -->
+  <!-- ✅ DOM + EVENT HANDLING SCRIPT -->
+  <!-- =============================== -->
+  <script>
+    const taskInput = document.getElementById("taskInput");
+    const addTaskBtn = document.getElementById("addTaskBtn");
+    const taskList = document.getElementById("taskList");
+    const searchInput = document.getElementById("searchInput");
+
+    // ==========================
+    // TAMBAH TUGAS
+    // ==========================
+    addTaskBtn.addEventListener("click", function () {
+      const taskText = taskInput.value.trim();
+
+      if (taskText === "") {
+        alert("Tugas tidak boleh kosong!");
+        return;
+      }
+
+      // buat element li
+      const li = document.createElement("li");
+      li.className = "list-group-item d-flex justify-content-between align-items-center";
+
+      // teks task
+      const span = document.createElement("span");
+      span.textContent = taskText;
+
+      // tombol edit
+      const editBtn = document.createElement("button");
+      editBtn.textContent = "Edit";
+      editBtn.className = "btn btn-warning btn-sm me-2";
+
+      // tombol hapus
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Hapus";
+      deleteBtn.className = "btn btn-danger btn-sm";
+
+      // group tombol
+      const btnGroup = document.createElement("div");
+      btnGroup.appendChild(editBtn);
+      btnGroup.appendChild(deleteBtn);
+
+      // gabungkan ke li
+      li.appendChild(span);
+      li.appendChild(btnGroup);
+
+      // tampilkan di list
+      taskList.appendChild(li);
+
+      // kosongkan input
+      taskInput.value = "";
+
+      // ==========================
+      // HAPUS TASK
+      // ==========================
+      deleteBtn.addEventListener("click", function () {
+        taskList.removeChild(li);
+      });
+
+      // ==========================
+      // ✅ EDIT TUGAS
+      // ==========================
+      editBtn.addEventListener("click", function () {
+        const newTask = prompt("Edit tugas:", span.textContent);
+
+        if (newTask !== null && newTask.trim() !== "") {
+          span.textContent = newTask.trim();
+        }
+      });
+    });
+
+    // ==========================
+    // ✅ SEARCH / FILTER
+    // ==========================
+    searchInput.addEventListener("keyup", function () {
+      const keyword = searchInput.value.toLowerCase();
+      const tasks = taskList.getElementsByTagName("li");
+
+      for (let i = 0; i < tasks.length; i++) {
+        const taskText = tasks[i].querySelector("span").textContent.toLowerCase();
+
+        if (taskText.includes(keyword)) {
+          tasks[i].style.display = "";
+        } else {
+          tasks[i].style.display = "none";
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
